@@ -1,0 +1,20 @@
+{
+  "name": "belkovy-shef",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --use-env-proxy --env-file-if-exists=.env.local node_modules/vite/bin/vite.js --host 0.0.0.0",
+    "build": "vite build && node scripts/build-mobile.js",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node --test",
+    "start": "node --use-env-proxy --env-file-if-exists=.env.local server/index.js",
+    "export": "node scripts/export-preview.js && node scripts/package-downloads.js"
+  },
+  "devDependencies": {
+    "vite": "^7.1.0"
+  },
+  "engines": {
+    "node": ">=24.5.0"
+  }
+}
