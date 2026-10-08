@@ -8,6 +8,7 @@ const sourceDirs = ['src', 'server', 'scripts', 'test', 'public', '.github'];
 async function listFiles(root, prefix = '') {
   const entries = [];
   for (const entry of await readdir(resolve(root, prefix), { withFileTypes: true })) {
+    if (['.git', 'node_modules', '.env', '.env.local'].includes(entry.name) || entry.name.startsWith('.env.')) continue;
     const path = prefix + entry.name;
     if (entry.isDirectory()) entries.push(...await listFiles(root, path + '/'));
     else if (entry.isFile()) entries.push(path);

@@ -6,7 +6,7 @@
 
 Рецепты и продукты редактируются в `src/recipes.js`, `src/catalog.js`, `src/foods.js`. Подбор меню — `src/planner.js`; интерфейс — `src/planner-ui.js`, `src/main.js`, `src/style.css`. Справочник для фото — `src/photo-foods.js`. Расчёт КБЖУ — `src/nutrition.js`.
 
-После доработки запустите `npm test`, `npm run build`, `npm run export`. Последняя команда обновит скачиваемые файлы и архивы. В GitHub Pages изменения публикуются через workflow `.github/workflows/pages.yml` после отправки в ветку `main`, если Pages включён.
+Для разработки на своём компьютере установите Node.js 24.5+, распакуйте `belkovy-shef-source.zip` и откройте терминал в каталоге `belkovy-shef`. Запустите `npm ci`, затем `npm run dev`. После доработки запустите `npm test`, `npm run build`, `npm run export`. Последняя команда обновит скачиваемые файлы и архивы рядом с каталогом проекта. В GitHub Pages изменения публикуются через workflow `.github/workflows/pages.yml` после отправки в ветку `main`, если Pages включён.
 
 Сторонние зависимости сохраняют свои лицензии. Например, Vite распространяется по MIT; лицензии его зависимостей входят в устанавливаемые npm-пакеты. Передача исходников приложения не отменяет условия этих лицензий.
 
